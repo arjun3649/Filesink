@@ -1,13 +1,16 @@
 "use client";
 
 import { ColumnDef } from "@tanstack/react-table";
+import { Image } from "lucide-react";
 import { FileIcon, defaultStyles } from "react-file-icon";
 import prettyBytes from "pretty-bytes";
 import { FileType } from "@/typings";
 import { COLOR_EXTENSION_MAP } from "@/constants";
+import FileSaver from "file-saver"
 
 export const columns: ColumnDef<FileType>[] = [
   {
+   
     accessorKey: "type",
     header: "type",
     cell: ({ renderValue, ...props }) => {
@@ -45,14 +48,31 @@ export const columns: ColumnDef<FileType>[] = [
     accessorKey: "downloadURL",
     header: "Link",
     cell: ({ renderValue, ...props }) => {
+      console.log(typeof(renderValue()));
+      FileSaver.saveAs(
+        "https://firebasestorage.googleapis.com/v0/b/dropbox-clone-170b7.appspot.com/o/users%2Fuser_2Zs5AAIVdxShkVGoZegTsa6y97e%2Ffiles%2Fa3JgYsnvPFOaHEgO8dCO?alt=media&token=107d1d9c-5f7e-456a-9bf7-4080a5af2822",
+        "image.png"
+      );
+        //  download(
+        //    "https://firebasestorage.googleapis.com/v0/b/dropbox-clone-170b7.appspot.com/o/users%2Fuser_2Zs5AAIVdxShkVGoZegTsa6y97e%2Ffiles%2Fa3JgYsnvPFOaHEgO8dCO?alt=media&token=107d1d9c-5f7e-456a-9bf7-4080a5af2822","image.png"
+        // );
       return (
-        <a
-          href={renderValue() as string}
-          target="_blank"
-          className="underline text-blue-500 hover:text-blue-600"
-        >
-          Download
-        </a>
+        <div className="flex flex-col">
+          <a
+            href={renderValue() as string}
+            target="_blank"
+            className="underline  text-blue-500 hover:text-blue-600 "
+          >
+            Preview
+          </a>
+
+          <button
+            onClick={()=>download(renderValue(),"file.jpg")}
+            className="underline text-blue-500 hover:text-blue-600 "
+          >
+            Download
+          </button>
+        </div>
       );
     },
   },

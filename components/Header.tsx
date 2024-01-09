@@ -10,16 +10,16 @@ function Header() {
         <div className="bg-[#0160FE] w-fit">
           <Image
             alt="Dropbox Logo"
-            src="https://www.shareicon.net/download/2016/07/13/606936_dropbox_2048x2048.png"
+            src="https://us.123rf.com/450wm/ibrandify/ibrandify1810/ibrandify181007507/118235768-upload-folder-icon-vector-dersign.jpg?ver=6"
             className="invert"
             height={50}
             width={50}
           />
         </div>
-        <h1 className="font-bold text-xl">Dropbox</h1>
+        <h1 className="font-bold text-xl">Filesink</h1>
       </Link>
       <div className="px-5 flex space-x-2 items-center">
-        <ThemeToggler/>
+        <ThemeToggler />
         <UserButton afterSignOutUrl="/" />
         <SignedOut>
           <SignInButton afterSignInUrl="/dashboard" mode="modal" />
