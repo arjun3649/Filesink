@@ -63,12 +63,7 @@ export const columns: ColumnDef<FileType>[] = [
             Preview
           </a>
 
-          <button
-            onClick={()=>{}}
-            className="underline text-blue-500 hover:text-blue-600 "
-          >
-            Download
-          </button>
+        
         </div>
       );
     },
