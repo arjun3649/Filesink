@@ -6,7 +6,7 @@ import { FileIcon, defaultStyles } from "react-file-icon";
 import prettyBytes from "pretty-bytes";
 import { FileType } from "@/typings";
 import { COLOR_EXTENSION_MAP } from "@/constants";
-import FileSaver from "file-saver"
+
 
 export const columns: ColumnDef<FileType>[] = [
   {
@@ -49,10 +49,7 @@ export const columns: ColumnDef<FileType>[] = [
     header: "Link",
     cell: ({ renderValue, ...props }) => {
       console.log(typeof(renderValue()));
-      FileSaver.saveAs(
-        "https://firebasestorage.googleapis.com/v0/b/dropbox-clone-170b7.appspot.com/o/users%2Fuser_2Zs5AAIVdxShkVGoZegTsa6y97e%2Ffiles%2Fa3JgYsnvPFOaHEgO8dCO?alt=media&token=107d1d9c-5f7e-456a-9bf7-4080a5af2822",
-        "image.png"
-      );
+    
         //  download(
         //    "https://firebasestorage.googleapis.com/v0/b/dropbox-clone-170b7.appspot.com/o/users%2Fuser_2Zs5AAIVdxShkVGoZegTsa6y97e%2Ffiles%2Fa3JgYsnvPFOaHEgO8dCO?alt=media&token=107d1d9c-5f7e-456a-9bf7-4080a5af2822","image.png"
         // );
@@ -67,7 +64,7 @@ export const columns: ColumnDef<FileType>[] = [
           </a>
 
           <button
-            onClick={()=>download(renderValue(),"file.jpg")}
+            onClick={()=>{}}
             className="underline text-blue-500 hover:text-blue-600 "
           >
             Download

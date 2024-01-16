@@ -10,7 +10,7 @@ function Header() {
         <div className="bg-[#0160FE] w-fit">
           <Image
             alt="Dropbox Logo"
-            src="https://us.123rf.com/450wm/ibrandify/ibrandify1810/ibrandify181007507/118235768-upload-folder-icon-vector-dersign.jpg?ver=6"
+            src="https://www.shareicon.net/download/2016/07/13/606936_dropbox_2048x2048.png"
             className="invert"
             height={50}
             width={50}
